@@ -2,6 +2,7 @@ import 'package:counter_pro/core/widgets/big_button.dart';
 import 'package:counter_pro/features/counter/presentation/bloc/counter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CounterPage extends StatelessWidget {
   const CounterPage({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class CounterView extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: EdgeInsets.all(16.r),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -43,7 +44,7 @@ class CounterView extends StatelessWidget {
                   return Text('$state', style: const TextStyle(fontSize: 64));
                 },
               ),
-              const SizedBox(height: 64),
+              SizedBox(height: 64.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -61,7 +62,7 @@ class CounterView extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 32),
+              SizedBox(height: 32.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -79,7 +80,7 @@ class CounterView extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 32),
+              SizedBox(height: 32.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -97,7 +98,7 @@ class CounterView extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 32),
+              SizedBox(height: 32.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
