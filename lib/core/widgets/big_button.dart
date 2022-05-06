@@ -1,5 +1,6 @@
 import 'package:counter_pro/core/resources/resources.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BigButton extends StatelessWidget {
   const BigButton({
@@ -12,21 +13,19 @@ class BigButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 130,
-      height: 60,
+      width: 130.w,
+      height: 60.h,
       child: ElevatedButton(
         onPressed: onPressed,
         child: Text(
           text,
-          style: const TextStyle(
-            fontSize: 24,
-          ),
+          style: TextStyle(fontSize: 24.sp),
         ),
         style: ElevatedButton.styleFrom(
           elevation: 0,
           primary: ColorsApp.primaryColor,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(5),
+            borderRadius: BorderRadius.circular(5.r),
           ),
         ),
       ),
