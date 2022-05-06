@@ -15,5 +15,5 @@ class CounterBloc extends Cubit<int> {
   void plusThousand() => emit(state + 1000);
   void minusThousand() => emit(state - 1000);
 
-  void resetCounter() => emit(state - state);
+  void resetCounter() => emit(0);
 }

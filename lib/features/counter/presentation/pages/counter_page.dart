@@ -35,83 +35,89 @@ class CounterView extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(16.r),
+          padding: const EdgeInsets.all(16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               BlocBuilder<CounterBloc, int>(
                 builder: (context, state) {
-                  return Text('$state', style: const TextStyle(fontSize: 64));
+                  return FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      '$state',
+                      style: const TextStyle(fontSize: 64),
+                    ),
+                  );
                 },
               ),
-              SizedBox(height: 64.h),
+              SizedBox(height: 32.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  BigButton(
-                    text: '+1',
-                    onPressed: () {
-                      context.read<CounterBloc>().plusOne();
-                    },
-                  ),
                   BigButton(
                     text: '-1',
                     onPressed: () {
                       context.read<CounterBloc>().minusOne();
                     },
                   ),
+                  BigButton(
+                    text: '+1',
+                    onPressed: () {
+                      context.read<CounterBloc>().plusOne();
+                    },
+                  ),
                 ],
               ),
-              SizedBox(height: 32.h),
+              SizedBox(height: 24.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  BigButton(
-                    text: '+10',
-                    onPressed: () {
-                      context.read<CounterBloc>().plusTen();
-                    },
-                  ),
                   BigButton(
                     text: '-10',
                     onPressed: () {
                       context.read<CounterBloc>().minusTen();
                     },
                   ),
+                  BigButton(
+                    text: '+10',
+                    onPressed: () {
+                      context.read<CounterBloc>().plusTen();
+                    },
+                  ),
                 ],
               ),
-              SizedBox(height: 32.h),
+              SizedBox(height: 24.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  BigButton(
-                    text: '+100',
-                    onPressed: () {
-                      context.read<CounterBloc>().plusHundred();
-                    },
-                  ),
                   BigButton(
                     text: '-100',
                     onPressed: () {
                       context.read<CounterBloc>().minusHundred();
                     },
                   ),
+                  BigButton(
+                    text: '+100',
+                    onPressed: () {
+                      context.read<CounterBloc>().plusHundred();
+                    },
+                  ),
                 ],
               ),
-              SizedBox(height: 32.h),
+              SizedBox(height: 24.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   BigButton(
-                    text: '+1000',
-                    onPressed: () {
-                      context.read<CounterBloc>().plusThousand();
-                    },
-                  ),
-                  BigButton(
                     text: '-1000',
                     onPressed: () {
                       context.read<CounterBloc>().minusThousand();
+                    },
+                  ),
+                  BigButton(
+                    text: '+1000',
+                    onPressed: () {
+                      context.read<CounterBloc>().plusThousand();
                     },
                   ),
                 ],
